@@ -2,6 +2,7 @@ let randomNumber = Math.round(Math.random() * 100);
 let outPut = document.querySelector(".final-output");
 let leftAtt = 7;
 let textAtt = document.querySelector("#attepts");
+
 function guessNumber(){
   //Collect input from the user
   let guess = document.querySelector(".inputs-Values").value;
@@ -11,7 +12,6 @@ function guessNumber(){
   
   if (guess <= 0 || guess > 100 || guess.length == 0) {
     outPut.innerText = "Please enter a number between 1 and 100"; 
-    
     return;
   }
   leftAtt--;
