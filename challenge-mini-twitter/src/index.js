@@ -1,3 +1,4 @@
+
 function newTwitt(e){
     e.preventDefault();
     let textArea = document.querySelector(".form-control");
@@ -5,7 +6,6 @@ function newTwitt(e){
     let theFirstChild = parentElement.firstChild;
     let newElement = document.createElement("p");
     
-
     let innerHTML = textArea.value;
     newElement.style.border = "solid black 3px";
     newElement.style.borderRadius = "5px";
@@ -19,10 +19,9 @@ function newTwitt(e){
     let newTwitDeleteButton = document.createElement("button");
     newTwitDeleteButton.className = "btn btn-secondary";
 
-    newTwitDeleteButton.style.border = "solid yellow 2px";
+    newTwitDeleteButton.style.border = "solid gray 2px";
     newTwitDeleteButton.style.padding = "5px";
     newTwitDeleteButton.innerText= "Delete";
-
     
     parentElement.insertBefore(newElement, theFirstChild);
     
@@ -37,10 +36,10 @@ function newTwitt(e){
     let arr = innerHTML.split("@");
     for(let i = 1; i < arr.length; i++){
     
-    let name = arr[i].split(" ")[0].split(",")[0].split("!")[0].split(".")[0].split("?")[0].split(":")[0].split(";")[0];
-    let whatReplace = "@"+ name;
-    let replacedString = '<a href = "www.twitter.com/'+ name +'">@' + name + '</a>'
-    innerHTML = innerHTML.replace(whatReplace, replacedString);
+        let name = arr[i].split(" ")[0].split(",")[0].split("!")[0].split(".")[0].split("?")[0].split(":")[0].split(";")[0];
+        let whatReplace = "@"+ name;
+        let replacedString = '<a href = "www.twitter.com/'+ name +'">@' + name + '</a>'
+        innerHTML = innerHTML.replace(whatReplace, replacedString);
 
     };
 
